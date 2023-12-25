@@ -3,8 +3,9 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { Balancer } from 'react-wrap-balancer';
 
-import { Separator } from '@/app/components/ui/separator';
 import { cn } from '@/app/lib/utils';
+
+import { Separator } from '@/app/components/ui/separator';
 
 interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: React.ElementType;
@@ -14,7 +15,7 @@ interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
 const PageHeader = ({
   className,
   children,
-  as: Comp = 'section',
+  as: Comp = 'header',
   separated = false,
   ...props
 }: PageHeaderProps) => {

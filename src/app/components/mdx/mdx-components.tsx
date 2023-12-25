@@ -1,11 +1,14 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
+import { cn } from '@/app/lib/utils';
+
+import { Alert, AlertDescription, AlertTitle } from '@/app/components/ui/alert';
+import { AspectRatio } from '@/app/components/ui/aspect-ratio';
 import { Callout } from '@/app/components/mdx/callout';
 import { CodeBlock } from '@/app/components/mdx/code-block';
 import { MdxCard } from '@/app/components/mdx/mdx-card';
-import { Alert, AlertDescription, AlertTitle } from '@/app/components/ui/alert';
-import { AspectRatio } from '@/app/components/ui/aspect-ratio';
-import { cn } from '@/app/lib/utils';
+
+import { ParabolicShotChart } from '@/app/pages/practices/components/charts/parabolic-shot-chart';
 
 /** Originally from `shadcn/ui-docs`
  * @link https://github.com/shadcn/ui/blob/main/apps/www/components/mdx-components.tsx
@@ -143,6 +146,7 @@ const components = {
       {...props}
     />
   ),
+  ParabolicShot: () => <ParabolicShotChart />,
   Alert,
   AlertTitle,
   AlertDescription,

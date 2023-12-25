@@ -84,7 +84,7 @@ export async function generateStaticParams(): Promise<PageProps['params'][]> {
   }));
 }
 
-export default async function PagePage({ params }: PageProps) {
+export default async function DocsPage({ params }: PageProps) {
   const page = await getPageFromParams(params);
 
   if (!page) {
