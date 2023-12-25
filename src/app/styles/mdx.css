@@ -1,0 +1,91 @@
+/** Originally from `shadcn/ui-docs`
+ * @link https://github.com/shadcn/ui/blob/main/apps/www/styles/mdx.css
+ */
+
+[data-rehype-pretty-code-fragment] {
+  @apply relative;
+}
+
+[data-rehype-pretty-code-fragment] code {
+  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
+  counter-reset: line;
+  box-decoration-break: clone;
+}
+
+[data-rehype-pretty-code-fragment] .line {
+  @apply inline-block min-h-[1rem] w-full px-4 py-0.5;
+}
+
+[data-rehype-pretty-code-fragment] [data-line-numbers] .line {
+  @apply px-2;
+}
+
+[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
+  @apply text-xs text-zinc-50/40;
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1.8rem;
+  margin-right: 1.4rem;
+  text-align: right;
+}
+
+[data-rehype-pretty-code-fragment] .line--highlighted {
+  @apply bg-zinc-700/50;
+}
+
+[data-rehype-pretty-code-fragment] .line-highlighted span {
+  @apply relative;
+}
+
+[data-rehype-pretty-code-fragment] .word--highlighted {
+  @apply rounded-md border-zinc-700/70 bg-zinc-700/50 p-1;
+}
+
+.dark [data-rehype-pretty-code-fragment] .word--highlighted {
+  @apply bg-zinc-900;
+}
+
+[data-language-icon] {
+  @apply hidden;
+}
+
+[data-rehype-pretty-code-title] {
+  padding: 0.75rem 0 0.75rem 2.5rem;
+  @apply mt-4 rounded-t-lg border border-b-0 bg-accent text-foreground;
+}
+
+[data-rehype-pretty-code-title]:has(+ [data-language-icon]) {
+  @apply pl-12;
+}
+
+[data-rehype-pretty-code-title] ~ pre {
+  @apply mt-0 rounded-t-none;
+}
+
+[data-rehype-pretty-code-title] ~ [data-language-icon][data-theme='light'] {
+  @apply block dark:hidden;
+}
+
+[data-rehype-pretty-code-title] ~ [data-language-icon][data-theme='dark'] {
+  @apply hidden dark:block;
+}
+
+[data-theme='light']:not([data-language-icon]) {
+  @apply block dark:hidden;
+}
+
+[data-theme='dark']:not([data-language-icon]) {
+  @apply hidden dark:block;
+}
+
+[data-rehype-pretty-code-fragment] .line--highlighted {
+  @apply rounded bg-muted-foreground/40  p-1;
+}
+[data-rehype-pretty-code-fragment] .word {
+  @apply rounded bg-muted-foreground/40  p-1;
+}
+
+.mdx > .steps:first-child > h3:first-child {
+  @apply mt-0;
+}

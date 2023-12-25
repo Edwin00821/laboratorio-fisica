@@ -6,10 +6,11 @@ import {
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  CopyIcon,
   Cross2Icon,
   DotFilledIcon,
   DotsHorizontalIcon,
-  HomeIcon,
+  ExclamationTriangleIcon,
   ImageIcon,
   LaptopIcon,
   MagnifyingGlassIcon,
@@ -30,10 +31,13 @@ export const Icons = {
   chevronDown: ChevronDownIcon,
   chevronLeft: ChevronLeftIcon,
   chevronRight: ChevronRightIcon,
+  copy: CopyIcon,
   close: Cross2Icon,
 
   dot: DotFilledIcon,
   dotsHorizontal: DotsHorizontalIcon,
+
+  warning: ExclamationTriangleIcon,
 
   laptop: LaptopIcon,
 
