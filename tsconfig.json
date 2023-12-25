@@ -20,7 +20,9 @@
     "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
-      "@/app/pages/home/*": ["./src/app/(pages)/(home)/*"]
+      "@/app/pages/home/*": ["./src/app/(pages)/(home)/*"],
+      "@/app/pages/practices/*": ["./src/app/(pages)/(lobby)/practices/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       {
@@ -29,6 +31,7 @@
     ]
   },
   "include": [
+    "next.config.js",
     ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
@@ -36,7 +39,8 @@
     "**/*.cjs",
     "**/*.mjs",
     "**/*.mts",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }
